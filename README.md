@@ -12,4 +12,4 @@ FEATURES:
 RESOURCES: 
     - Object Oriented C++
 
-NB: For start The project will apply only CLI based and later it'll be improved to GUI if God wishes, Inshaallah.
+NB: For start The project will apply only CLI based and using inmemory to store the students info's but later it'll be improved to GUI and applying file handling if God wishes, Inshaallah.
