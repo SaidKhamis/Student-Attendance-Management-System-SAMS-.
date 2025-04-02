@@ -1,1 +1,1 @@
-	} while (choice != 5);
+} while (choice != 5);
