@@ -7,4 +7,8 @@
 	void display_student() const {
 		cout << "ID: " << student_id << " | Name: " << student_name << endl;
 	}
+
+        void delete_student() {
+		
+	}
 };
