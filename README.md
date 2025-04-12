@@ -8,6 +8,7 @@ FEATURES:
    - Mark attendance (Present / Abscent).
    - Show available students.
    - Display student attendance.
+   - Delete student.
 
 RESOURCES: 
     - Object Oriented C++
