@@ -1,3 +1,3 @@
-	case 5:
+	case 6:
 		cout << "Exiting...\n";
 		break;
