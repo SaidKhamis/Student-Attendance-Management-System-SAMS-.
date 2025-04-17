@@ -1,3 +1,3 @@
 	case 6:
-		cout << "Exiting...\n";
+		cout << "Exiting the program!\n";
 		break;
