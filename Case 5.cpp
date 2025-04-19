@@ -11,8 +11,8 @@ case 5: {
   for (auto it=students.begin(); it!=students.end(); it++) {
     if((*it)->student_id==id){
       students.erase(it);
-      cout << "Student deleted successfully!\n";
     }
   }
+  cout << "Student deleted successfully!\n";
   break; 
 }
