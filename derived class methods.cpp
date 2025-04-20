@@ -1,6 +1,7 @@
 	// Function to mark attendance
 	void mark_attendance() {
-		cout << "Attendance for " << student_name << " on " << date << ": " << status << endl;
+		cout << "Students' Attendance on " << date << ": " << endl;
+		cout << student_name << ":" << status << endl;
 	}
 	
 	// Function to display attendance record
