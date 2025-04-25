@@ -93,27 +93,27 @@ int main() {
 			
 			case 2: 
 			{	
-				if (currentDate == "") {  // If the date hasn't been set yet
-					cout << "\n Enter Date (YYYY-MM-DD): ";
-					cin >> currentDate;  // Set the date for the current attendance session
-				}
 				
-				int id;
-				string status;
-				cout << " Enter Student ID: ";
-				cin >> id;
-				cout << " Enter Status (Present/Absent): ";
-				cin >> status;
+				cout << "\n Enter Date (YYYY-MM-DD): ";
+				cin >> currentDate;  // Set the date for the current attendance session
+
+				do {
+				   int id;
+				   string status;
+				   cout << " Enter Student ID: ";
+				   cin >> id;
+				   cout << " Enter Status (Present/Absent): ";
+				   cin >> status;
 				
-				// Find the student by ID
-				for (auto& student : students) {
+				   // Find the student by ID
+				   for (auto& student : students) {
 					if (student->student_id == id) {
 						Attendance* newAttendance = new Attendance(id, student->student_name, currentDate, status);
 						newAttendance->mark_attendance();
 						attendanceRecords.push_back(newAttendance);
 						break;
 					}
-				}
+				   }
 				break;
 			}
 			
