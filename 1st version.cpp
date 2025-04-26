@@ -56,6 +56,7 @@ int main() {
 
 	int choice;
 	do {
+		system("cls");
 		//Display menu options.
 		cout << "\n   ***  STUDENT ATTENDANCE MANAGEMENT SYSTEM  ***   \n";
 		cout << "1. Add Student.\n";
@@ -154,7 +155,7 @@ int main() {
 				
 			default:
 				cout << "Invalid choice. Please try again.\n";
-		}
+	    }
 	} while (choice != 5);
 	
 	return 0;
