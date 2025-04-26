@@ -119,7 +119,7 @@ int main() {
 			}
 			
 			case 3:	{
-				cout << " - STUDENT'S LIST - \n";
+				cout << "\n - STUDENT'S LIST - \n";
 				for (const auto& student : students) {
 					student->display_student();
 				}		
@@ -133,28 +133,28 @@ int main() {
 				break;
 			
 			case 5:
-				cout << " - STUDENT'S LIST - \n";
+				cout << "\n -- STUDENT'S LIST -- \n";
 				for (const auto& student : students) {
 					student->display_student();
 				}
 				 int id;
-				 cout << "Enter Student ID to delete: ";
+				 cout << "\n Enter Student ID to delete: ";
 				 cin >> id;
 				 
 				 for(auto it=students.begin(); it!=students.end(); it++){
 				 	if((*it)->student_id==id){
 				 		students.erase(it);
-				 		cout << "Student deleted successfully!\n";
+				 		cout << " Student deleted successfully!\n";
 					 }
 				 }
 				 break;
 				 
 			case 6:
-				cout << "Exiting...\n";
+				cout << "\n  Thank you for using the System, Good Bye..\n";
 				break;
 				
 			default:
-				cout << "Invalid choice. Please try again.\n";
+				cout << "\n Invalid choice. Please try again.\n";
 	      }
 		system("pause");
 	} while (choice != 5);
