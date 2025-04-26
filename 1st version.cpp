@@ -155,7 +155,8 @@ int main() {
 				
 			default:
 				cout << "Invalid choice. Please try again.\n";
-	    }
+	      }
+		system("pause");
 	} while (choice != 5);
 	
 	return 0;
