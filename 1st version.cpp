@@ -20,7 +20,7 @@ public:
 	
 	// Function to display student details
 	void display_student() const {
-		cout << student_id << " | " << student_name << endl;
+		cout << "  " << student_id << " | " << student_name << endl;
 	}
 };
 
@@ -94,10 +94,10 @@ int main() {
 			
 			case 2: 
 			{	
-				
 				cout << "\n Enter Date (YYYY-MM-DD): ";
 				cin >> currentDate;  // Set the date for the current attendance session
 
+				int exit2;
 				do {
 				   int id;
 				   string status;
@@ -114,7 +114,11 @@ int main() {
 						attendanceRecords.push_back(newAttendance);
 						break;
 					}
-				   }
+				 }
+					cout << "\n Enter 0 to Continue or 1 to Exit : ";
+					cin >> exit2;
+				}
+					while(exit2==0);
 				break;
 			}
 			
