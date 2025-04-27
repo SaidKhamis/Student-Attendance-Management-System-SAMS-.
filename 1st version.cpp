@@ -119,7 +119,7 @@ int main() {
 			}
 			
 			case 3:	{
-				cout << "\n - STUDENT'S LIST - \n";
+				cout << "\n -- STUDENT'S LIST -- \n";
 				for (const auto& student : students) {
 					student->display_student();
 				}		
@@ -150,14 +150,14 @@ int main() {
 				 break;
 				 
 			case 6:
-				cout << "\n  Thank you for using the System, Good Bye..\n";
+				cout << "\n  Thank you for using the Students Attendance Management System, Good Bye..\n";
 				break;
 				
 			default:
 				cout << "\n Invalid choice. Please try again.\n";
 	      }
 		system("pause");
-	} while (choice != 5);
+	} while (choice != 6);
 	
 	return 0;
 }
