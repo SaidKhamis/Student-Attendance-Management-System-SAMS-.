@@ -15,7 +15,7 @@ public:
 	
 	// Function to add a student
 	void add_student() {
-		cout << "Student added: ID = " << student_id << ", Name = " << student_name << endl;
+		cout << " Student(s) Added Successfully.\n";
 	}
 	
 	// Function to display student details
@@ -88,7 +88,7 @@ int main() {
 					cout << "\nPress 0-continue or 1-close : ";
 					cin >> exit;
 				}	while(exit==0);		
-				cout << "  Student added successfully!\n";	
+				cout << students.add_student();	
 				break;
 			}
 			
