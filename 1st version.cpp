@@ -6,10 +6,11 @@ using namespace std;
 
 // Base class Student
 class Student {
-public:
+private:
 	int student_id;
 	string student_name;
 
+public:
 	// Constructor to initialize student details
 	Student(int id, string name) : student_id(id), student_name(name) {}
 	
@@ -52,7 +53,7 @@ public:
 int main() {
 	vector<Student*> students;
 	vector<Attendance*> attendanceRecords;
-	string currentDate = ""; //Variable to store the date for the current attendance marking
+	string currentDate; //Variable to store the date for the current attendance marking
 
 	int choice;
 	do {
@@ -94,7 +95,7 @@ int main() {
 			
 			case 2: 
 			{	
-				cout << "\n Enter Date (YYYY-MM-DD): ";
+				cout << "\n Enter Date (DD-MM-YYYY): ";
 				cin >> currentDate;  // Set the date for the current attendance session
 
 				int exit2;
