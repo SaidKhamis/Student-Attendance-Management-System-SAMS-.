@@ -1,7 +1,6 @@
 #include <iostream>
-#include <fstream>
+#include <fstream> //Get environment to apply file based storage
 #include <sstream>
-#include <vector>
 #include <string>
 
 using namespace std;
