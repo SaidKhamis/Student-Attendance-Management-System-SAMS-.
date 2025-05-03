@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream> //Get environment to apply file based storage
-#include <sstream>
+#include <sstream> //To allow variables as stream
 #include <string>
 
 using namespace std;
@@ -45,20 +45,21 @@ public:
 	void display_attendance() const {
 		cout << "ID: " << student_id << " | Date: " << date << " | Status: " << status << endl;
 	}
-	
+
+        // Getter to set date during marking
 	string getDate() const { 
 		return date; 
 	}
 };
 
 int main() {
-	vector<Student*> students;
-	vector<Attendance*> attendanceRecords;
+	vector<Student*> students; // Crating object for students and storing its data in vectore
+	vector<Attendance*> attendanceRecords; // Creating object for attendance and storing its data in vectore
 	string currentDate; //Variable to store the date for the current attendance marking
 
 	int choice;
 	do {
-		system("cls");
+		system("cls"); // Command to clean the window suraface after one iteration.
 		//Display menu options.
 		cout << "\n   ***  STUDENT ATTENDANCE MANAGEMENT SYSTEM  ***   \n";
 		cout << "1. Add Student.\n";
@@ -162,7 +163,7 @@ int main() {
 			default:
 				cout << "\n Invalid choice. Please try again.\n";
 	      }
-		system("pause");
+		system("pause"); // Command to stop the results after one iteration so a user can see rssults before it get cleaned.
 	} while (choice != 6);
 	
 	return 0;
