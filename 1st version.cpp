@@ -53,8 +53,6 @@ public:
 };
 
 int main() {
-	vector<Student*> students; // Crating object for students and storing its data in vectore
-	vector<Attendance*> attendanceRecords; // Creating object for attendance and storing its data in vectore
 	string currentDate; //Variable to store the date for the current attendance marking
 
 	int choice;
