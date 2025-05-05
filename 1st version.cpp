@@ -17,12 +17,12 @@ public:
 	
 	// Function to add a student
 	void add_student() {
-		cout << " Student(s) Added Successfully.\n";
+		ofstream addStdFile("Students.txt");
 	}
 	
 	// Function to display student details
 	void display_student() const {
-		cout << "  " << student_id << " | " << student_name << endl;
+		ifstream addStdFile("Students.txt");
 	}
 };
 
@@ -51,6 +51,8 @@ public:
 		return date; 
 	}
 };
+
+        
 
 int main() {
 	string currentDate; //Variable to store the date for the current attendance marking
