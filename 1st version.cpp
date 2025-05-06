@@ -17,6 +17,11 @@ public:
 	
 	// Function to add a student
 	void add_student() {
+		cout << "\nEnter Student ID: ";
+		cin >> student_id;
+		cout << "\nEnter Student's Name: ";
+		cin >> student_name;
+		
 		ofstream addStdFile("Students.txt");
 	}
 	
