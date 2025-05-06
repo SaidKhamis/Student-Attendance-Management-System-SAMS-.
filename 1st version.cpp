@@ -22,7 +22,7 @@ public:
 		cout << "\nEnter Student's Name: ";
 		cin >> student_name;
 		
-		ofstream addStdFile("Students.txt");
+		ofstream addStdFile("Students.txt"); //Create or Open the file.
 	}
 	
 	// Function to display student details
