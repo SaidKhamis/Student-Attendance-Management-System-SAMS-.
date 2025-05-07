@@ -23,7 +23,9 @@ public:
 		cin >> student_name;
 		
 		ofstream Student_File("Students.txt"); //Create or Open the file.
-		if
+		if(Student_File.isopen()) {
+			
+		}
 	}
 	
 	// Function to display student details
