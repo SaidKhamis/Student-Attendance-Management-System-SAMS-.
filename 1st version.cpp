@@ -26,7 +26,11 @@ public:
 		if(Student_File.isopen()) {
 			Student_File << "Student_ID: " << student_id;
 			Student_File << "\nName: " << student_name;
-			
+			Student_File.close();
+			cout << "Student Added Successfully.\n";
+		}
+		else {
+			cout << "\nError: Unable to open file, Try again later.";
 		}
 	}
 	
