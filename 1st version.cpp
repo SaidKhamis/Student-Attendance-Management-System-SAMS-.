@@ -24,6 +24,8 @@ public:
 		
 		ofstream Student_File("Students.txt"); //Create or Open the file.
 		if(Student_File.isopen()) {
+			Student_File << "Student_ID: " << student_id;
+			Student_File << "\nName: " << student_name;
 			
 		}
 	}
