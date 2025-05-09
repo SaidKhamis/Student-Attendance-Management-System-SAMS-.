@@ -17,21 +17,25 @@ public:
 	
 	// Function to add a student
 	void add_student() {
-		cout << "\nEnter Student ID: ";
-		cin >> student_id;
-		cout << "\nEnter Student's Name: ";
-		cin >> student_name;
+		int exit;
+		do{
+			cout << "\nEnter Student ID: ";
+		        cin >> student_id;
+		        cout << "\nEnter Student's Name: ";
+		        cin >> student_name;
 		
-		ofstream Student_File("Students.txt"); //Create or Open the file.
-		if(Student_File.isopen()) {
-			Student_File << "Student_ID: " << student_id;
-			Student_File << "\nName: " << student_name;
-			Student_File.close();
-			cout << "Student Added Successfully.\n";
+		        ofstream Student_File("Students.txt"); //Create or Open the file.
+		        if(Student_File.isopen()) {
+			     Student_File << "Student_ID: " << student_id;
+			     Student_File << "\nName: " << student_name;
+			     Student_File.close();
+		 	     cout << "Student Added Successfully.\n";
+		       }  
+		       else {
+			     cout << "\nError: Unable to open file, Try again later.";
+		       }
 		}
-		else {
-			cout << "\nError: Unable to open file, Try again later.";
-		}
+		while(exit==0);
 	}
 	
 	// Function to display student details
