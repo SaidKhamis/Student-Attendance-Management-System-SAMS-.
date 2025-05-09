@@ -17,7 +17,7 @@ public:
 	
 	// Function to add a student
 	void add_student() {
-		int exit;
+		char exit;
 		do{
 			cout << "\nEnter Student ID: ";
 		        cin >> student_id;
@@ -34,8 +34,10 @@ public:
 		       else {
 			     cout << "\nError: Unable to open file, Try again later.";
 		       }
+			cout << "\nDo you wish to continue (y/n) : ";
+			cin >> exit;
 		}
-		while(exit==0);
+		while(exit==y || exit==Y);
 	}
 	
 	// Function to display student details
