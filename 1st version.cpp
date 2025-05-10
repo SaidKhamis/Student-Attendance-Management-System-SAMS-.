@@ -32,10 +32,15 @@ public:
 		 	     cout << "Student Added Successfully.\n";
 		       }  
 		       else {
-			     cout << "\nError: Unable to open file, Try again later.";
+			     cout << "\nError: Unable to open file, Please Try again later.";
 		       }
-			cout << "\nDo you wish to continue (y/n) : ";
-			cin >> exit;
+			do {
+			     cout << "\nDo you wish to continue (y/n) : ";
+				
+			     cin >> exit;
+			     exit = tolower(exit);
+			} while(exit!=y && exit!=n);
+
 		}
 		while(exit==y || exit==Y);
 	}
