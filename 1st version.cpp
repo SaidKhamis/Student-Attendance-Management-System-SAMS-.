@@ -39,10 +39,10 @@ public:
 				
 			     cin >> exit;
 			     exit = tolower(exit);
-			} while(exit!=y && exit!=n);
+			} while(exit!='y' && exit!='n');
 
 		}
-		while(exit==y || exit==Y);
+		while(exit=='y');
 	}
 	
 	// Function to display student details
