@@ -24,7 +24,7 @@ public:
 		        cout << "\nEnter Student's Name: ";
 		        cin >> student_name;
 		
-		        ofstream Student_File("Students.txt"); //Create or Open the file.
+		        ofstream Student_File("Students.txt", ios::app); /*Create or Open the file. with append mode to avoid data overwritten in the file*/
 		        if(Student_File.isopen()) {
 			     Student_File << "Student_ID: " << student_id;
 			     Student_File << "\nName: " << student_name;
@@ -34,6 +34,8 @@ public:
 		       else {
 			     cout << "\nError: Unable to open file, Please Try again later.";
 		       }
+
+			
 			do {
 			     cout << "\nDo you wish to continue (y/n) : ";
 				
