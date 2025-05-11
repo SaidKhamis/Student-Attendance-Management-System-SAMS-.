@@ -32,7 +32,7 @@ public:
 		 	     cout << "Student Added Successfully.\n";
 		       }  
 		       else {
-			     cout << "\nError: Unable to open file, Please Try again later.";
+			     cout << "\nError: Unable to open the file, Please Try again later.";
 		       }
 
 			
@@ -47,7 +47,8 @@ public:
 	}
 	
 	// Function to display student details
-	void display_student() const {File("Students.txt");
+	void display_student() const {
+		ifstream Student_file("Students.txt");
 	}
 };
 
