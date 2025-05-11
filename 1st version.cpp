@@ -40,9 +40,8 @@ public:
 			     cout << "\nDo you wish to continue (y/n) : ";
 				
 			     cin >> exit;
-			     exit = tolower(exit);
-			} while(exit!='y' && exit!='n');
-
+			     exit = tolower(exit); //Converting the enterd character Y/y or N/n to small letter.
+			} while(exit!='y' && exit!='n');  //Allow only y and n, if not the program will iterate and need a user to enter again another character.
 		}
 		while(exit=='y');
 	}
