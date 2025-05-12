@@ -19,16 +19,16 @@ public:
 	void add_student() {
 		char exit;
 		do{
-			cout << "\nEnter Student ID: ";
+			cout << "Enter Student ID: ";
 		        cin >> student_id;
-		        cout << "\nEnter Student's Name: ";
+		        cout << "Enter Student's Name: ";
 		        cin >> student_name;
 		
 		        ofstream Student_File("Students.txt", ios::app); /*Create or Open the file. with append mode to add new content in the end of an existing file and hence to
 	  avoid data overwritten in the file*/
 		        if(Student_File.is_open()) {
 			     Student_File << "Student_ID: " << student_id;
-			     Student_File << "\nName: " << student_name;
+			     Student_File << "   Name: " << student_name;
 			     Student_File.close();
 		       }  
 		       else {
@@ -37,15 +37,14 @@ public:
 
 			
 			do {
-			     cout << "\nDo you wish to continue (y/n) : ";
+			     cout << "\nDo you wish to continue (y/n) : \n";
 				
 			     cin >> exit;
 			     exit = tolower(exit); //Converting the enterd character Y/y or N/n to small letter.
 			} while(exit!='y' && exit!='n');  //Allow only y and n, if not the program will iterate and need a user to enter again another character.
 		}
 		while(exit=='y');
-		cout << "Thanks for your Coperation.\n";
-
+		cout << "Thanks for your Coperation, You are welcome.\n";
 	}
 	
 	// Function to display student details
