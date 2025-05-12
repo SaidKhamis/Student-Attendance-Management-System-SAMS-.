@@ -24,12 +24,12 @@ public:
 		        cout << "\nEnter Student's Name: ";
 		        cin >> student_name;
 		
-		        ofstream Student_File("Students.txt", ios::app); /*Create or Open the file. with append mode to avoid data overwritten in the file*/
-		        if(Student_File.isopen()) {
+		        ofstream Student_File("Students.txt", ios::app); /*Create or Open the file. with append mode to add new content in the end of an existing file and hence to
+	  avoid data overwritten in the file*/
+		        if(Student_File.is_open()) {
 			     Student_File << "Student_ID: " << student_id;
 			     Student_File << "\nName: " << student_name;
 			     Student_File.close();
-		 	     cout << "Student Added Successfully.\n";
 		       }  
 		       else {
 			     cout << "\nError: Unable to open the file, Please Try again later.";
@@ -44,6 +44,8 @@ public:
 			} while(exit!='y' && exit!='n');  //Allow only y and n, if not the program will iterate and need a user to enter again another character.
 		}
 		while(exit=='y');
+		cout << "Thanks for your Coperation.\n";
+
 	}
 	
 	// Function to display student details
