@@ -23,6 +23,16 @@ public:
 		        cin >> student_id;
 		        cout << "Enter Student's Name: ";
 		        cin >> student_name;
+
+                        bool exist = false;
+			string line;
+			
+                        //Opening file and check if the the entered student already exists in the list to avoid duplications. 
+			ifstream Student_File_Check("Students.txt"){
+				if(Student_File_Check.is_open()){
+					
+				}
+			}
 		
 		        ofstream Student_File("Students.txt", ios::app); /*Create or Open the file. with append mode to add new content in the end of an existing file and hence to
 	  avoid data overwritten in the file*/
