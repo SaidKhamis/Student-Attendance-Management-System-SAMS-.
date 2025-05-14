@@ -30,7 +30,12 @@ public:
                         //Opening file and check if the the entered student already exists in the list to avoid duplications. 
 			ifstream Student_File_Check("Students.txt"){
 				if(Student_File_Check.is_open()){
-					
+					while(getline(Student_File_Check, line)) {
+						if(line.find("Student_ID: " + student_id) != string::npos) {
+							getline(Student_File_Check, line);
+							
+						}
+					}
 				}
 			}
 		
