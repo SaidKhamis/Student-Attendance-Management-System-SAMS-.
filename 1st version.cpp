@@ -33,7 +33,10 @@ public:
 					while(getline(Student_File_Check, line)) {
 						if(line.find("Student_ID: " + student_id) != string::npos) {
 							getline(Student_File_Check, line);
-							
+							if(line.find("Name: " + student_name) != string::npos) {
+								exist = true;
+								break;
+							}
 						}
 					}
 				}
