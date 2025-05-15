@@ -53,9 +53,9 @@ public:
 			             cout << "\nError: Unable to open the file, Please Try again later.";
 		               }
 			}
-		        
-
-			
+		        else {
+				cout << "Error: The entered Student Details already exists.\n;
+			}
 			do {
 			     cout << "\nDo you wish to continue (y/n) : \n";
 				
