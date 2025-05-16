@@ -20,28 +20,31 @@ public:
 		char exit = "n";
 		do{
 			cout << "Enter Student ID: ";
-		        cin >> student_id;
-		        cout << "Enter Student's Name: ";
-		        cin >> student_name;
+		    cin >> student_id;
+		    cout << "Enter Student's Name: ";
+		    cin >> student_name;
 
-                        bool exist = false;
+            bool exist = false;
 			string line;
 			
-                        //Opening file and check if the the entered student already exists in the list to avoid duplications. 
+            //Opening file and check if the the entered student already exists in the list to avoid duplications. 
 			ifstream Student_File_Check("Students.txt"){
 				if(Student_File_Check.is_open()){
+					//Check the first line
 					while(getline(Student_File_Check, line)) {
-						if(line.find("Student_ID: " + student_id) != string::npos) {
-							getline(Student_File_Check, line);
+						if(line.find("Student_ID: " + student_id) != string::npos) {//If find the content that resemble the entered Student ID then condition is false and while statement terminates and exist = false, otherwise the while loop statement got executed.
+							getline(Student_File_Check, line);//Check the next line for Student Name after getting the ID not found in the list.
+							//Checking if the name is there in the file
 							if(line.find("Name: " + student_name) != string::npos) {
-								exist = true;
+								exist = true; //if all if-statements are true, then exist  set to true means the enterd Data are not yet pubished.
 								break;
 							}
 						}
 					}
 				}
 			}
-		        if(exist){
+			
+		    if(exist){
 				ofstream Student_File("Students.txt", ios::app); /*Create or Open the file. with append mode to add new content in the end of an existing file and hence to
 	                        avoid data overwritten in the file*/
 		                if(Student_File.is_open()) {
@@ -55,12 +58,12 @@ public:
 			             cout << "\nError: Unable to open the file, Please Try again later.";
 		               }
 			}
-		        else {
+		    else {
 				cout << "Error: The entered Student Details already exists.\n;
 			}
+			
 			do {
 			     cout << "\nDo you wish to continue (y/n) : \n";
-				
 			     cin >> exit;
 			     exit = tolower(exit); //Converting the enterd character Y/y or N/n to small letter.
 			} while(exit!='y' && exit!='n');  //Allow only y and n, if not the program will iterate and need a user to enter again another character.
