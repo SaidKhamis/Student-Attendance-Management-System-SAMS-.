@@ -67,6 +67,8 @@ public:
 		}
 		while(exit=='y');
 		cout << "Thanks for your Coperation, You are welcome.\n";
+		
+		return;
 	}
 	
 	// Function to display student details
