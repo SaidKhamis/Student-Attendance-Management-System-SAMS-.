@@ -11,10 +11,7 @@ private:
 	int student_id;
 	string student_name;
 
-public:
-	// Constructor to initialize student details
-	Student(int id, string name) : student_id(id), student_name(name) {}
-	
+public:	
 	// Function to add a student
 	void add_student() {
 		char exit = 'n';
@@ -44,6 +41,7 @@ public:
 							}
 						}
 					}
+					Student_File_Check.close();
 				}
 			}
 			
