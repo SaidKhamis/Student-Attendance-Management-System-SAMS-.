@@ -17,26 +17,29 @@ public:
 	
 	// Function to add a student
 	void add_student() {
-		char exit = "n";
+		char exit = 'n';
 		do{
-			cout << "Enter Student ID: ";
-		    cin >> student_id;
-		    cout << "Enter Student's Name: ";
-		    cin >> student_name;
+		    	cout << "Enter Student ID: ";
+		    	cin >> student_id;
+		    	cout << "Enter Student's Name: ";
+		   	cin >> student_name;
 
-            bool exist = false;
+           		bool exist = false;
 			string line;
 			
-            //Opening file and check if the the entered student already exists in the list to avoid duplications. 
+           		//Opening file and check if the the entered student already exists in the list to avoid duplications. 
 			ifstream Student_File_Check("Students.txt"){
 				if(Student_File_Check.is_open()){
-					//Check the first line
+					//Checking the first line
 					while(getline(Student_File_Check, line)) {
-						if(line.find("Student_ID: " + student_id) != string::npos) {//If find the content that resemble the entered Student ID then condition is false and while statement terminates and exist = false, otherwise the while loop statement got executed.
-							getline(Student_File_Check, line);//Check the next line for Student Name after getting the ID not found in the list.
+						//If find the content that resemble the entered Student ID then condition is false and while statement terminates and exist = false, otherwise the while loop statement got executed.
+						if(line.find("Student_ID: " + student_id) != string::npos) {
+							//Check the next line for Student Name after getting the ID not found in the list.
+							getline(Student_File_Check, line);
 							//Checking if the name is there in the file
 							if(line.find("Name: " + student_name) != string::npos) {
-								exist = true; //if all if-statements are true, then exist  set to true means the enterd Data are not yet pubished.
+								//if all if-statements are true, then exist  set to true means the entered Data are not yet pubished.
+								exist = true;
 								break;
 							}
 						}
@@ -49,7 +52,7 @@ public:
 	                        avoid data overwritten in the file*/
 		                if(Student_File.is_open()) {
 			             while(exit == "n");
-					cout << "\n   -***   STUDENTS LIST    ***-   \n"; 
+				     cout << "\n   -***   STUDENTS LIST    ***-   \n"; 
 			             Student_File << "\nStudent_ID: " << student_id << endl;
 			             Student_File << "Name: " << student_name;
 			             Student_File.close();
@@ -59,7 +62,7 @@ public:
 		               }
 			}
 		    else {
-				cout << "Error: The entered Student Details already exists.\n;
+				cout << "Error: The entered Student Details already exists.\n";
 			}
 			
 			do {
