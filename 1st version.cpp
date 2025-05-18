@@ -49,8 +49,10 @@ public:
 				ofstream Student_File("Students.txt", ios::app); /*Create or Open the file. with append mode to add new content in the end of an existing file and hence to
 	                        avoid data overwritten in the file*/
 		                if(Student_File.is_open()) {
-			             while(exit == "n");
-				     cout << "\n   -***   STUDENTS LIST    ***-   \n"; 
+			             while(exit == "n"){
+					cout << "\n   -***   STUDENTS LIST    ***-   \n";      
+				     }
+				     
 			             Student_File << "\nStudent_ID: " << student_id << endl;
 			             Student_File << "Name: " << student_name;
 			             Student_File.close();
