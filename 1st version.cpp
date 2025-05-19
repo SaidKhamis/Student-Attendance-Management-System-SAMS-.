@@ -50,7 +50,8 @@ public:
 	                        avoid data overwritten in the file*/
 		                if(Student_File.is_open()) {
 			             while(exit == "n"){
-					cout << "\n   -***   STUDENTS LIST    ***-   \n";      
+					cout << "\n   -***   STUDENTS LIST    ***-   \n";    
+					break;     
 				     }
 				     
 			             Student_File << "\nStudent_ID: " << student_id << endl;
