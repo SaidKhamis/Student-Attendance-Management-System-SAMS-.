@@ -55,7 +55,7 @@ public:
 				     }
 				     
 			             Student_File << "\nStudent_ID: " << student_id << endl;
-			             Student_File << "Name: " << student_name;
+			             Student_File << " | Name: " << student_name;
 			             Student_File.close();
 		                }  
 		               else {
