@@ -80,25 +80,30 @@ public:
 	
 	// Function to display student details
 	void display_student() const {
-		string line;
-		ifstream Student_file("Students.txt");
-		if(Student_file.is_open()) {
-		    while(getline(Student_file, line)) {
-			    
-		    }
-		}
-		
+		ifstream Read_File("Students.txt");
+                string line;
+
+                if(Read_File.is_open()) {
+			while (getline(inFile, line)) {
+				cout << line << endl;
+                        }
+                        inFile.close();
+                } else {
+			cout << "Unable to open file for reading.\n";
+                }
+                return;
 	}
-};
 
 // Derived class Attendance
 class Attendance : public Student {
 private:
 	string date;
-	string status;  // "Present" or "Absent"
-
-public:
-	// Constructor to initialize attendance details
+	string status;  				    ```*. Writing
+        while (getline(inFile, line)) {
+            cout << line << endlll
+        inFile.close();
+    } else {
+        cout << "Unablcout << line << endllance details
 	Attendance(int id, string name, string date, string status): Student(id, name), date(date), status(status) {}
 	
 	// Function to mark attendance
