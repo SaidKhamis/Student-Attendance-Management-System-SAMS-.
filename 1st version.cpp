@@ -84,12 +84,12 @@ public:
                 string line;
 
                 if(Read_File.is_open()) {
-			while (getline(inFile, line)) {
+			while (getline(Read_File, line)) {
 				cout << line << endl;
                         }
-                        inFile.close();
+                        Read_File.close();
                 } else {
-			cout << "Unable to open file for reading.\n";
+			cout << "Unable to open the file..\n";
                 }
                 return;
 	}
