@@ -80,7 +80,14 @@ public:
 	
 	// Function to display student details
 	void display_student() const {
+		string line;
 		ifstream Student_file("Students.txt");
+		if(Student_file.is_open()) {
+		    while(getline(Student_file, line)) {
+			    
+		    }
+		}
+		
 	}
 };
 
