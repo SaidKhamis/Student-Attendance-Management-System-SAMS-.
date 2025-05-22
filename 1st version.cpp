@@ -46,6 +46,9 @@ public:
 			}
 			
 		    if(exist){
+			    cout << "Error: The Entered Student's Details already exists.\n";
+			    return;
+		    } else{
 				ofstream Student_File("Students.txt", ios::app); /*Create or Open the file. with append mode to add new content in the end of an existing file and hence to
 	                        avoid data overwritten in the file*/
 		                if(Student_File.is_open()) {
@@ -61,9 +64,6 @@ public:
 		               else {
 			             cout << "\nError: Unable to open the file, Please Try again later.";
 		               }
-			}
-		    else {
-				cout << "Error: The entered Student Details already exists.\n";
 			}
 			
 			do {
