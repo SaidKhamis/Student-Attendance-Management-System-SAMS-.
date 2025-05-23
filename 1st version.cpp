@@ -79,11 +79,11 @@ public:
                 string line;
 
                 if(Read_File.is_open()) {
-			int n = 1;
+			int number = 1;
 			cout << "\n  --  STUDENTS' LIST  --  \n";
 			while (getline(Read_File, line)) {
 				cout << n << "." << line << endl;
-				n++;
+				number++;
                         }
                         Read_File.close();
                 } else {
