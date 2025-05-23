@@ -79,8 +79,10 @@ public:
                 string line;
 
                 if(Read_File.is_open()) {
+			int n = 1;
 			while (getline(Read_File, line)) {
-				cout << line << endl;
+				cout << n << "." << line << endl;
+				n++;
                         }
                         Read_File.close();
                 } else {
