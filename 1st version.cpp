@@ -80,6 +80,7 @@ public:
 
                 if(Read_File.is_open()) {
 			int n = 1;
+			cout << "\n  --  STUDENTS' LIST  --  \n";
 			while (getline(Read_File, line)) {
 				cout << n << "." << line << endl;
 				n++;
