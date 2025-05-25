@@ -144,33 +144,9 @@ int main() {
 			
 			case 2: 
 			{	
-				cout << "\n Enter Date (DD-MM-YYYY): ";
-				cin >> currentDate;  // Set the date for the current attendance session
-
-				int exit2;
-				do {
-				   int id;
-				   string status;
-				   cout << " Enter Student ID: ";
-				   cin >> id;
-				   cout << " Enter Status (Present/Absent): ";
-				   cin >> status;
-				
-				   // Find the student by ID
-				   for (auto& student : students) {
-					if (student->student_id == id) {
-						Attendance* newAttendance = new Attendance(id, student->student_name, currentDate, status);
-						newAttendance->mark_attendance();
-						attendanceRecords.push_back(newAttendance);
-						break;
-					}
-				 }
-					cout << "\n Enter 0 to Continue or 1 to Exit : ";
-					cin >> exit2;
-				}
-					while(exit2==0);
+				display_student();
 				break;
-			}
+			
 			
 			case 3:	{
 				cout << "\n -- STUDENT'S LIST -- \n";
