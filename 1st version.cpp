@@ -96,12 +96,8 @@ public:
 class Attendance : public Student {
 private:
 	string date;
-	string status;  				    ```*. Writing
-        while (getline(inFile, line)) {
-            cout << line << endlll
-        inFile.close();
-    } else {
-        cout << "Unablcout << line << endllance details
+	string status;
+        
 	Attendance(int id, string name, string date, string status): Student(id, name), date(date), status(status) {}
 	
 	// Function to mark attendance
