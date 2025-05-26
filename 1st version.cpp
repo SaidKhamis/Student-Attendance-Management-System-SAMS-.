@@ -36,7 +36,7 @@ public:
 							//Checking if the name is there in the file
 							if(line.find("Name: " + student_name) != string::npos) {
 								//if all if-statements are true, then exist  set to true means the entered Data are not yet pubished.
-								exist = true;
+								return (exist = true);
 								break;
 							}
 						}
