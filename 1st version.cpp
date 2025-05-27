@@ -78,6 +78,7 @@ public:
 		ifstream Read_File("Students.txt");
                 string line;
 
+		//Reading from the file and display 
                 if(Read_File.is_open()) {
 			int number = 1;
 			cout << "\n  --  STUDENTS' LIST  --  \n";
