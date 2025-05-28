@@ -124,15 +124,16 @@ int main() {
 
 	int choice;
 	do {
-		system("cls"); // Command to clean the window suraface after one iteration.
+		system("cls"); // Command to clean the window surface after each loop iteration.
 		//Display menu options.
-		cout << "\n   ***  STUDENT ATTENDANCE MANAGEMENT SYSTEM  ***   \n";
-		cout << "1. Add Student.\n";
-		cout << "2. Mark Attendance.\n";
-		cout << "3. Display Students.\n";
-		cout << "4. Display Attendance.\n";
-		cout << "5. Delete Student.\n";
-		cout << "6. Exit.\n";
+		cout << "\n   ***  STUDENTS ATTENDANCE MANAGEMENT SYSTEM (SAMS) ***   \n";
+		cout << " 1. Add Student.\n";
+		cout << " 2. Mark Attendance.\n";
+		cout << " 3. Display Students.\n";
+		cout << " 4. Display Attendance.\n";
+		cout << " 5. Delete Student.\n";
+		cout << " 6. Exit.\n";
+                cout << "    _ _ _ _ _ _ _ _ _ _ _ _ _    \n";
 		cout << " Enter your choice: ";
 		cin >> choice;
 		
@@ -145,7 +146,7 @@ int main() {
 			
 			case 2: 
 			{	
-				display_student();
+				display_students();
 				break;
 			
 			
@@ -153,7 +154,7 @@ int main() {
 				cout << "\n -- STUDENT'S LIST -- \n";
 				for (const auto& student : students) {
 					student->display_student();
-				}		
+					
 				break;				
 			}		
 				
