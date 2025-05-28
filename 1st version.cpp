@@ -98,11 +98,12 @@ class Attendance : public Student {
 private:
 	string date;
 	string status;
-        
+
+public:
 	Attendance(int id, string name, string date, string status): Student(id, name), date(date), status(status) {}
-	
+
 	// Function to mark attendance
-	void mark_attendance() {
+	void mark_attendance(string date) {
 		display_students();
 	}
 	
@@ -151,10 +152,8 @@ int main() {
 			
 			
 			case 3:	{
-				cout << "\n -- STUDENT'S LIST -- \n";
-				for (const auto& student : students) {
-					student->display_student();
-					
+				display_students();
+				
 				break;				
 			}		
 				
