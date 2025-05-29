@@ -22,7 +22,7 @@ public:
 		    	cout << "Enter Student's Name: ";
 		   	cin >> student_name;
 
-           		bool exist = false;
+           		bool exist = false; //For checking any redundancy in Students' details
 			string line;
 			
            		//Opening file and check if the the entered student already exists in the list to avoid duplications. 
