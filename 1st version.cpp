@@ -16,6 +16,7 @@ public:
 	void add_student() {
 		char exit = 'n';
 		do{
+			//Requesting Students Name and ID
 		    	cout << "Enter Student's ID: ";
 		    	cin >> student_id;
 		    	cout << "Enter Student's Name: ";
