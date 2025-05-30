@@ -32,8 +32,9 @@ public:
 					while(getline(Student_File_Check, line)) {
 						//If find the content that resemble the entered Student ID then condition is false and while statement terminates and exist = false, otherwise the while loop statement got executed.
 						if(line.find("Student_ID: " + student_id) || line.find("Name: " + student_name) != string::npos) {
-								return (exist = true);
-								break;
+							exist = true;
+							return (exist);
+							break;
 						}
 					}
 					Student_File_Check.close();
