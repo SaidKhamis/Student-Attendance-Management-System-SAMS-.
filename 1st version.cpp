@@ -31,15 +31,9 @@ public:
 					//Checking the first line
 					while(getline(Student_File_Check, line)) {
 						//If find the content that resemble the entered Student ID then condition is false and while statement terminates and exist = false, otherwise the while loop statement got executed.
-						if(line.find("Student_ID: " + student_id) != string::npos) {
-							//Check the next line for Student Name after getting the ID not found in the list.
-							getline(Student_File_Check, line);
-							//Checking if the name is there in the file
-							if(line.find("Name: " + student_name) != string::npos) {
-								//if all if-statements are true, then exist  set to true means the entered Data are not yet pubished.
+						if(line.find("Student_ID: " + student_id) || line.find("Name: " + student_name) != string::npos) {
 								return (exist = true);
 								break;
-							}
 						}
 					}
 					Student_File_Check.close();
