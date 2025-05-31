@@ -30,7 +30,7 @@ public:
 				if(Student_File_Check.is_open()){
 					//Checking the first line
 					while(getline(Student_File_Check, line)) {
-						//If find the content that resemble the entered Student ID then condition is false and while statement terminates and exist = false, otherwise the while loop statement got executed.
+						//If the content that resemble the entered Student ID found then condition is true and while statement executed  and exist = true, otherwise the while loop progress iterating through the file.
 						if(line.find("Student_ID: " + student_id) || line.find("Name: " + student_name) != string::npos) {
 							exist = true;
 							return (exist);
@@ -100,7 +100,7 @@ public:
 
 	// Function to mark attendance
 	void mark_attendance(string date) {
-		display_students();
+		string line;
 	}
 	
 	// Function to display attendance record
