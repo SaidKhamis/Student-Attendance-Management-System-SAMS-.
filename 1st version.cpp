@@ -15,6 +15,10 @@ public:
 	// Function to add a student
 	void add_student() {
 		char exit = 'n';
+		ofstream header("Students.txt", ios::app);
+		if(header.is_open()){
+			header << "\n STUDENT-ID " << "  NAME " << endl;
+		}
 		do{
 			//Requesting Students Name and ID
 		    	cout << "Enter Student's ID: ";
