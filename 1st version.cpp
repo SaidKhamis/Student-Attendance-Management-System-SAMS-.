@@ -71,11 +71,11 @@ public:
 	
 	// Function to display student details
 	void display_students() const {
-		ifstream Read_File("Students.txt");
+		ifstream read_File("Students.txt");
                 string line;
 
 		//Reading from the file and display 
-                if(Read_File.is_open()) {
+                if(read_File.is_open()) {
 			int number = 1;
 			cout << "\n  --  STUDENTS' LIST  --  \n";
 			while (getline(Read_File, line)) {
@@ -101,6 +101,8 @@ public:
 	// Function to mark attendance
 	void mark_attendance(string date) {
 		string line;
+		ifstream read_file("Students.txt"); //Reading Registered students for marking.
+		ofstream write_file("temp.txt"); //Temporary file to store marked students (Id, Name and Present/Absentl.
 	}
 	
 	// Function to display attendance record
