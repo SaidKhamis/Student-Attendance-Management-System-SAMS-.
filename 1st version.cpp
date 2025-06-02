@@ -31,7 +31,7 @@ public:
 					//Checking the first line
 					while(getline(Student_File_Check, line)) {
 						//If the content that resemble the entered Student ID found then condition is true and while statement executed  and exist = true, otherwise the while loop progress iterating through the file.
-						if(line.find("Student_ID: " + student_id) || line.find("Name: " + student_name) != string::npos) {
+						if(line.find("Student_ID: " + student_id) && line.find("Name: " + student_name) != string::npos) {
 							exist = true;
 							return (exist);
 							break;
