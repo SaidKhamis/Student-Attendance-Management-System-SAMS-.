@@ -103,6 +103,14 @@ public:
 		string line;
 		ifstream read_file("Students.txt"); //Reading Registered students for marking.
 		ofstream write_file("temp.txt"); //Temporary file to store marked students (Id, Name and Present/Absentl.
+
+		if(read_file.is_open() && write_file.is_open()) {
+			while(getline(read_file, line){
+				cout << "\n " << line ;
+				cout << " Student's Status(✓|x): ";
+				cin >> status;
+			}
+		}
 	}
 	
 	// Function to display attendance record
