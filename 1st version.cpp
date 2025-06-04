@@ -10,7 +10,6 @@ class Student {
 private:
 	int student_id;
 	string student_name;
-
 public:	
 	// Function to add a student
 	void add_student() {
